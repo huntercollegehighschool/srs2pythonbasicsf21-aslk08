@@ -14,7 +14,7 @@ diamond(4) -->
   * *  
    * 
 
-diamond(5) -->
+diamond(7) -->
       *      
      * *     
     *   *    
@@ -30,5 +30,15 @@ diamond(5) -->
       * 
 """
 
+
 def diamond(size):
-  pass  # delete this when you start writing your code
+  if size >= 1:
+    print("*".center(2 * size - 1))
+  for i in range(2, size + 1):
+    row = "*" + " " * (i * 2 - 3) + "*"
+    print(row.center(2 * size - 1))
+  for i in range(size - 1, 1, -1):
+    row = "*" + " " * (i * 2 - 3) + "*"
+    print(row.center(2 * size - 1))
+  if size >= 2:
+    print("*".center(2 * size - 1))

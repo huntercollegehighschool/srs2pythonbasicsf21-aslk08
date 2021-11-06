@@ -5,4 +5,7 @@ For example, sumofsquares(3) should return 14, since 1 + 4 + 9 = 14.
 """
 
 def sumofsquares(number):
-  pass  # delete this line when you start defining the function
+  total = 0
+  for n in range(1, number + 1):
+    total += n ** 2
+  return total
